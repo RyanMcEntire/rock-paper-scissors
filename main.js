@@ -15,7 +15,7 @@ function computerPlay() {
 
 function playRound(p, c) {
     if  (p === c) {
-        console.log(`${p} matches ${c}. Tie!`);
+        console.log(`${p.charAt(0).toUpperCase() + p.slice(1)} matches ${c.charAt(0).toUpperCase() + c.slice(1)}. Tie!`);
         return 0;
     }    if (p === "rock" && c === "paper") {
         console.log( "Rock loses to Paper. You lose..."); 
