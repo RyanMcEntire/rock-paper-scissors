@@ -14,32 +14,26 @@ function computerPlay() {
 }
 
 function playRound(p, c) {
-    if (p == "rock" && c == "paper") {
-        console.log( "Rock loses to Paper. You lose...") 
+    if  (p === c) {
+        console.log(`${p} matches ${c}. Tie!`);
+        return 0;
+    }    if (p === "rock" && c === "paper") {
+        console.log( "Rock loses to Paper. You lose..."); 
         return -1;
-    }   else if (p == "rock" && c == "scissors") {
-        console.log( "Rock beats Scissors. You win!")
+    }   if (p === "rock" && c === "scissors") {
+        console.log( "Rock beats Scissors. You win!");
         return 1;
-    }   else if (p == "rock" && c == "rock") {
-        console.log( "Rock matches Rock. Its a tie!")
-        return 0;
-    }   else if (p == "paper" && c == "paper") {
-        console.log( "Paper matches Paper. Its a tie!")
-        return 0;
-    }   else if (p == "paper" && c == "scissors") {
-        console.log( "Paper Loses to Scissors. You lose...")
+    }   if (p === "paper" && c === "scissors") {
+        console.log( "Paper Loses to Scissors. You lose...");
         return -1;
-    }   else if (p == "paper" && c == "rock") {
-        console.log( "Paper beats Rock. You win!")
+    }   if (p === "paper" && c === "rock") {
+        console.log( "Paper beats Rock. You win!");
         return 1;
-    }   else if (p == "scissors" && c == "paper") {
-        console.log( "Scissors beats Paper. You win!")
+    }   if (p === "scissors" && c === "paper") {
+        console.log( "Scissors beats Paper. You win!");
         return 1;
-    }   else if (p == "scissors" && c == "scissors") {
-        console.log( "Scissors matches Scissors. Its a tie!")
-        return 0;
-    }   else if (p == "scissors" && c == "rock") {
-        console.log( "Scissors loses to Rock. You lose.")
+    }   if (p === "scissors" && c === "rock") {
+        console.log( "Scissors loses to Rock. You lose.");
         return -1;
     }
 }
@@ -54,6 +48,9 @@ function game() {
         p = p.toLowerCase();
         const round = playRound(p,c);
         results = results + round;
+        if (round === 0) {
+            i--;
+        }
         if (round > 0) {
             pScore++;
         }   
@@ -68,9 +65,6 @@ function game() {
     }   
     if (results < 0) {
         console.log("You lost!");
-    }
-    if (results === 0) {
-        console.log("It was a tie. Better luck next time...")
     }
 }
 
