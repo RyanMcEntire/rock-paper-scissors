@@ -12,6 +12,7 @@ function computerPlay() {
         return "scissors";
     }
 }
+    
 
 function playRound(p, c) {
     if  (p === c) {
