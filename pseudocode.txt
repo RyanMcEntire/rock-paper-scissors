@@ -1,0 +1,29 @@
+display score p0 - c0
+store win/loss tally at 0
+
+start game
+start loop round at 5
+  wait for player selection
+  player selects the button
+    event listener detects click and returns the value of the choice.
+  player choice is saved into variable
+  computer makes choice
+  
+  player choice is compared to computer choice
+  if choices are a tie,
+    display "you tied", 
+    and add 1 to round count to reset round
+  if the player wins, 
+    display green "O" or checkmark,
+    increase player score by 1
+  if the computer wins, 
+    display red "X"
+    increase computer score by 1
+
+when the loop reaches zero
+  if the win/loss tally is positive
+    display "you won!"
+  if the win/loss tally is negative
+    display "you lost..."
+
+end program
