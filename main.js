@@ -1,11 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
-let results = 0;
 let round = 0;
-
-if (round === 5) {
-  console.log(results, playerScore, computerScore);
-}
 
 function randomNumber() {
   return Math.floor(Math.random() * 3);
@@ -24,6 +19,7 @@ function computerPlay() {
 
 const winLoseTie = document.querySelector("#winLoseTie");
 const resetContainer = document.querySelector("#resultsBox");
+const gameResults = document.querySelector('#gameResults');
 
 function playRound(p, c) {
   if (round === 5) {
@@ -41,9 +37,9 @@ function playRound(p, c) {
     console.log(round);
   }
   if (p === c) {
-    winLoseTie.textContent = `${p.charAt(0).toUpperCase() + p.slice(1)} matches ${
-        c.charAt(0).toUpperCase() + c.slice(1)}. Tie!`
-    ;
+    winLoseTie.textContent = `${
+      p.charAt(0).toUpperCase() + p.slice(1)
+    } matches ${c.charAt(0).toUpperCase() + c.slice(1)}. Tie!`;
     return 0;
   }
   if (p === "rock" && c === "paper") {
