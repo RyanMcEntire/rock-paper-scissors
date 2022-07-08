@@ -28,7 +28,7 @@ function playRound(p, c) {
     pScissors.disabled = true;
 
     if (playerScore > computerScore) {
-      gameResults.textcontent = `Congrats!, you won the game! Player Score: ${playerScore} Computer Score: ${computerScore}`;
+      gameResults.textContent = `Congrats!, you won the game! Player Score: ${playerScore} Computer Score: ${computerScore}`;
     }
     if (computerScore > playerScore) {
       gameResults.textContent = `Sorry, you lost this one... Player Score: ${playerScore} Computer Score: ${computerScore}`;
