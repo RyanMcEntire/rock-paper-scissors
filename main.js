@@ -21,6 +21,10 @@ const winLoseTie = document.querySelector("#winLoseTie");
 const resetContainer = document.querySelector("#resultsBox");
 const gameResults = document.querySelector("#gameResults");
 
+const playerTally = document.querySelector("#ourScore")
+const computerTally = document.querySelector("#theirScore");
+
+
 function playRound(p, c) {
   if (round === 5) {
     pRock.disabled = true;

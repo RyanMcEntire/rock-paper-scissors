@@ -1,0 +1,8 @@
+.p-box {
+  border: 1px solid brown;
+  height: 90px;
+  width: 90px;
+}
+body {
+  background-color: antiquewhite;
+}

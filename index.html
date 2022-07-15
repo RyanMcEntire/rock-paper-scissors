@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="pScoreText">
+        <p>Player Score:</p>
+        <div id="ourScore"></div>
+    </div>
+    <div class="cScoreText">
+        <p>Computer Score:</p>
+        <div id="theirScore"></div>
+    </div>
     <div id="pBox" class="p-box">
-        <button class="player-choice" id="pRock" value="rock">rock</button>
-        <button class="player-choice" id="pPaper" value="paper">paper</button>
-        <button class="player-choice" id="pScissors" value="scissors">scissors</button>
+      <button class="player-choice" id="pRock" value="rock">rock</button>
+      <button class="player-choice" id="pPaper" value="paper">paper</button>
+      <button class="player-choice" id="pScissors" value="scissors">
+        scissors
+      </button>
     </div>
     <div id="results-box" value="results-box">
-        <h2 id="winLoseTie"></h2>
-        <h1 id="gameResults"></h1>
+      <h2 id="winLoseTie"></h2>
+      <h1 id="gameResults"></h1>
     </div>
     <div class="c-box">
-        <h3 id="ongoing-score"></h3>
-
+      <h3 id="ongoing-score"></h3>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
