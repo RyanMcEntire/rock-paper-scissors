@@ -21,15 +21,18 @@ const winLoseTie = document.querySelector("#winLoseTie");
 const resetContainer = document.querySelector("#resultsBox");
 const gameResults = document.querySelector("#gameResults");
 
-const playerTally = document.querySelector("#ourScore")
+const playerTally = document.querySelector("#ourScore");
 const computerTally = document.querySelector("#theirScore");
-
+playerTally.textContent = playerScore;
+computerTally.textContent = computerScore;
 
 function playRound(p, c) {
   if (round === 5) {
     pRock.disabled = true;
     pPaper.disabled = true;
     pScissors.disabled = true;
+    playerTally.textContent = playerScore;
+    computerTally.textContent = computerScore;
 
     if (playerScore > computerScore) {
       gameResults.textContent = `Congrats!, you won the game! Player Score: ${playerScore} Computer Score: ${computerScore}`;
@@ -48,37 +51,37 @@ function playRound(p, c) {
   }
   if (p === "rock" && c === "paper") {
     winLoseTie.textContent = "Rock loses to Paper. You lose...";
-    //console.log("Rock loses to Paper. You lose...");
+    computerTally.textContent = computerScore;
     round++;
     return computerScore++;
   }
   if (p === "rock" && c === "scissors") {
     winLoseTie.textContent = "Rock beats Scissors. You win!";
-    //console.log("Rock beats Scissors. You win!");
+    playerTally.textContent = playerScore;
     round++;
     return playerScore++;
   }
   if (p === "paper" && c === "scissors") {
     winLoseTie.textContent = "Paper Loses to Scissors. You lose...";
-    //console.log("Paper Loses to Scissors. You lose...");
+    computerTally.textContent = computerScore;
     round++;
     return computerScore++;
   }
   if (p === "paper" && c === "rock") {
     winLoseTie.textContent = "Paper beats Rock. You win!";
-    //console.log("Paper beats Rock. You win!");
+    playerTally.textContent = playerScore;
     round++;
     return playerScore++;
   }
   if (p === "scissors" && c === "paper") {
     winLoseTie.textContent = "Scissors beats Paper. You win!";
-    //console.log("Scissors beats Paper. You win!");
+    playerTally.textContent = playerScore;
     round++;
     return playerScore++;
   }
   if (p === "scissors" && c === "rock") {
     winLoseTie.textContent = "Scissors loses to Rock. You lose.";
-    //console.log("Scissors loses to Rock. You lose.");
+    computerTally.textContent = computerScore;
     round++;
     return computerScore++;
   }

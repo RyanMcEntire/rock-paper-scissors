@@ -1,8 +1,25 @@
 .p-box {
-  border: 1px solid brown;
   height: 90px;
   width: 90px;
+  margin: auto;
+  background-color: rgb(238, 163, 113);
+  border-radius: 10px;
 }
 body {
   background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreBox {
+  display: flex;
+  margin: auto;
+  padding: 40px;
+  background-color: rgb(172, 242, 255);
+  border-radius: 30px;
+  max-width: 400px;
+  justify-content: space-between;
+}
+.pScoreText {
+  flex-direction: column;
 }
